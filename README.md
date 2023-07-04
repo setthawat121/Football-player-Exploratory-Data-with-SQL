@@ -1,4 +1,6 @@
 # Football-player-Exploratory-Data-with-Python
+![image](https://github.com/setthawat121/Webscaping-IMDB/assets/96307668/5b710c8f-0050-4a8b-8168-08df25d1d254)
+<br />Data form : Vaastav Anand (vaastav)
 ## Exploratory Data Analysis
 - Show percentage goals scored vs goals conceded :
 ```
