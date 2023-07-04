@@ -12,15 +12,15 @@ from MiniProject.dbo.cleaned_players$
 where goals_conceded > 0 and goals_scored > 0 and element_type = 'FWD'
 order by 7 Desc;
 
---show percentage chance to shooting goals vs Games
+--show percentage opportunity to shooting goals vs Games
 
-select first_name,second_name,(goals_scored+goals_conceded) as chance_to_shooting,minutes,ROUND((minutes/90),0) as Games_played 
-	,Round((goals_scored+goals_conceded)/(Round((minutes/90),0)),0) as Chances_to_shooting_per_game,element_type
+select first_name,second_name,(goals_scored+goals_conceded) as opportunity_to_shooting,minutes,ROUND((minutes/90),0) as Games_played 
+	,Round((goals_scored+goals_conceded)/(Round((minutes/90),0)),0) as opportunity_to_shooting_per_game,element_type
 from MiniProject.dbo.cleaned_players$
 where minutes > 0 and (goals_scored+goals_conceded) > 0 and element_type = 'FWD' and (minutes/90) >= 1
 order by 7 Desc
 
---show percentage chance to goals per games
+--show percentage opportunity to goals per games
 
 select first_name,second_name,goals_scored,minutes,element_type ,ROUND((minutes/90),0) as Games_played 
 	,Cast(goals_scored/(Round((minutes/90),0))as decimal(10,2)) as goals_per_game
